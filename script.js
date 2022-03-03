@@ -18,6 +18,10 @@ buttons.map((button)=>{
         }
         
         else if(alvo == "-"){
+            if(display.innerHTML == ""){
+                operator = "-";
+                return;
+            }
             if(first == true){
                 n = parseFloat(display.innerHTML, 10);
                 display.innerHTML = "";
@@ -58,6 +62,10 @@ buttons.map((button)=>{
             }
         }
         else if(alvo == "+"){
+            if(display.innerHTML == ""){
+                operator = "+";
+                return;
+            }
             if(first == true){
                 n = parseFloat(display.innerHTML, 10);
                 display.innerHTML = "";
@@ -98,6 +106,10 @@ buttons.map((button)=>{
             }
         }
         else if(alvo == "*"){
+            if(display.innerHTML == ""){
+                operator = "*";
+                return;
+            }
             if(first == true){
                 n = parseFloat(display.innerHTML, 10);
                 display.innerHTML = "";
@@ -138,6 +150,10 @@ buttons.map((button)=>{
             }
         }
         else if(alvo == "/"){
+            if(display.innerHTML == ""){
+                operator = "/";
+                return;
+            }
             if(first == true){
                 n = parseFloat(display.innerHTML, 10);
                 display.innerHTML = "";
@@ -178,6 +194,9 @@ buttons.map((button)=>{
             }
         }
         else if(alvo == "="){
+            if(display.innerHTML == ""){
+                return;
+            }
             first = true;
             if(operator == "+"){
                 n += parseFloat(display.innerHTML, 10);
