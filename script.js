@@ -19,7 +19,7 @@ buttons.map((button)=>{
         
         else if(alvo == "-"){
             if(first == true){
-                n = parseInt(display.innerHTML, 10);
+                n = parseFloat(display.innerHTML, 10);
                 display.innerHTML = "";
                 display2.innerHTML = n;
                 first = false;
@@ -28,28 +28,28 @@ buttons.map((button)=>{
             }
             else{
                 if(operator == "+"){
-                    n += parseInt(display.innerHTML, 10);
+                    n += parseFloat(display.innerHTML, 10);
                     display.innerHTML = "";
                     display2.innerHTML = n;
                     operator = "-"
                     console.log(n);
                 }
                 else if(operator == "-"){
-                    n -= parseInt(display.innerHTML, 10);
+                    n -= parseFloat(display.innerHTML, 10);
                     display.innerHTML = "";
                     display2.innerHTML = n;
                     operator = "-"
                     console.log(n);
                 }    
                 else if(operator == "*"){
-                    n *= parseInt(display.innerHTML, 10);
+                    n *= parseFloat(display.innerHTML, 10);
                     display.innerHTML = "";
                     display2.innerHTML = n;
                     operator = "-"
                     console.log(n);
                 }    
                 else if(operator == "/"){
-                    n /= parseInt(display.innerHTML, 10);
+                    n /= parseFloat(display.innerHTML, 10);
                     display.innerHTML = "";
                     display2.innerHTML = n;
                     operator = "-"
@@ -59,7 +59,7 @@ buttons.map((button)=>{
         }
         else if(alvo == "+"){
             if(first == true){
-                n = parseInt(display.innerHTML, 10);
+                n = parseFloat(display.innerHTML, 10);
                 display.innerHTML = "";
                 display2.innerHTML = n;
                 first = false;
@@ -68,28 +68,28 @@ buttons.map((button)=>{
             }
             else{
                 if(operator == "+"){
-                    n += parseInt(display.innerHTML, 10);
+                    n += parseFloat(display.innerHTML, 10);
                     display.innerHTML = "";
                     display2.innerHTML = n;
                     operator = "+"
                     console.log(n);
                 }
                 else if(operator == "-"){
-                    n -= parseInt(display.innerHTML, 10);
+                    n -= parseFloat(display.innerHTML, 10);
                     display.innerHTML = "";
                     display2.innerHTML = n;
                     operator = "+"
                     console.log(n);
                 }    
                 else if(operator == "*"){
-                    n *= parseInt(display.innerHTML, 10);
+                    n *= parseFloat(display.innerHTML, 10);
                     display.innerHTML = "";
                     display2.innerHTML = n;
                     operator = "+"
                     console.log(n);
                 }    
                 else if(operator == "/"){
-                    n /= parseInt(display.innerHTML, 10);
+                    n /= parseFloat(display.innerHTML, 10);
                     display.innerHTML = "";
                     display2.innerHTML = n;
                     operator = "+"
@@ -99,7 +99,7 @@ buttons.map((button)=>{
         }
         else if(alvo == "*"){
             if(first == true){
-                n = parseInt(display.innerHTML, 10);
+                n = parseFloat(display.innerHTML, 10);
                 display.innerHTML = "";
                 display2.innerHTML = n;
                 first = false;
@@ -108,28 +108,28 @@ buttons.map((button)=>{
             }
             else{
                 if(operator == "+"){
-                    n += parseInt(display.innerHTML, 10);
+                    n += parseFloat(display.innerHTML, 10);
                     display.innerHTML = "";
                     display2.innerHTML = n;
                     operator = "*"
                     console.log(n);
                 }
                 else if(operator == "-"){
-                    n -= parseInt(display.innerHTML, 10);
+                    n -= parseFloat(display.innerHTML, 10);
                     display.innerHTML = "";
                     display2.innerHTML = n;
                     operator = "*"
                     console.log(n);
                 }    
                 else if(operator == "*"){
-                    n *= parseInt(display.innerHTML, 10);
+                    n *= parseFloat(display.innerHTML, 10);
                     display.innerHTML = "";
                     display2.innerHTML = n;
                     operator = "*"
                     console.log(n);
                 }    
                 else if(operator == "/"){
-                    n /= parseInt(display.innerHTML, 10);
+                    n /= parseFloat(display.innerHTML, 10);
                     display.innerHTML = "";
                     display2.innerHTML = n;
                     operator = "*"
@@ -139,7 +139,7 @@ buttons.map((button)=>{
         }
         else if(alvo == "/"){
             if(first == true){
-                n = parseInt(display.innerHTML, 10);
+                n = parseFloat(display.innerHTML, 10);
                 display.innerHTML = "";
                 display2.innerHTML = n;
                 first = false;
@@ -148,28 +148,28 @@ buttons.map((button)=>{
             }
             else{
                 if(operator == "+"){
-                    n += parseInt(display.innerHTML, 10);
+                    n += parseFloat(display.innerHTML, 10);
                     display.innerHTML = "";
                     display2.innerHTML = n;
                     operator = "/"
                     console.log(n);
                 }
                 else if(operator == "-"){
-                    n -= parseInt(display.innerHTML, 10);
+                    n -= parseFloat(display.innerHTML, 10);
                     display.innerHTML = "";
                     display2.innerHTML = n;
                     operator = "/"
                     console.log(n);
                 }    
                 else if(operator == "*"){
-                    n *= parseInt(display.innerHTML, 10);
+                    n *= parseFloat(display.innerHTML, 10);
                     display.innerHTML = "";
                     display2.innerHTML = n;
                     operator = "/"
                     console.log(n);
                 }    
                 else if(operator == "/"){
-                    n /= parseInt(display.innerHTML, 10);
+                    n /= parseFloat(display.innerHTML, 10);
                     display.innerHTML = "";
                     display2.innerHTML = n;
                     operator = "/"
@@ -177,7 +177,41 @@ buttons.map((button)=>{
                 }
             }
         }
+        else if(alvo == "="){
+            first = true;
+            if(operator == "+"){
+                n += parseFloat(display.innerHTML, 10);
+                display.innerHTML = n;
+                display2.innerHTML = "";
+                operator = "+"
+                console.log(n);
+            }
+            else if(operator == "-"){
+                n -= parseFloat(display.innerHTML, 10);
+                display.innerHTML = n;
+                display2.innerHTML = "";
+                operator = "-"
+                console.log(n);
+            }    
+            else if(operator == "*"){
+                n *= parseFloat(display.innerHTML, 10);
+                display.innerHTML = n;
+                display2.innerHTML = "";
+                operator = "*"
+                console.log(n);
+            }    
+            else if(operator == "/"){
+                n /= parseFloat(display.innerHTML, 10);
+                display.innerHTML = n;
+                display2.innerHTML = "";
+                operator = "/"
+                console.log(n);
+            }
+        }
 
+        else if(alvo == "←"){
+            display.innerHTML = display.innerHTML.substring(0, display.innerHTML.length -1);
+        }
 
         // numeros
         else{
