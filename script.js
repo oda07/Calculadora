@@ -13,6 +13,7 @@ buttons.map((button)=>{
             display.innerHTML = "";
             display2.innerHTML = "";
             n = 0;
+            operator = "none";
             console.log(n);
             return;
         }
