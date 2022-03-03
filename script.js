@@ -1,7 +1,9 @@
 var display = document.getElementById("display");
+var display2 = document.getElementById("display2");
 var buttons = Array.from(document.getElementsByClassName("button"));
 var n = 0;
-var operator = "+";
+var operator = "none";
+var first = true;
 
 buttons.map((button)=>{
     button.addEventListener('click', (e)=>{
@@ -9,80 +11,177 @@ buttons.map((button)=>{
 
         if(alvo == "C"){
             display.innerHTML = "";
+            display2.innerHTML = "";
             n = 0;
             console.log(n);
+            return;
         }
         
-
-        else if(alvo == "="){
-            if(operator == "+"){
-                n += parseInt(display.innerHTML, 10);
-                console.log(n);
-                setTimeout(() => {
-                    display.innerHTML = n;
-                }, 10);
-            }
-            if(operator == "-"){
-                n -= parseInt(display.innerHTML, 10);
-                console.log(n);
-                setTimeout(() => {
-                    display.innerHTML = n;
-                }, 10);
-            }
-            if(operator == "/"){
-                n /= parseInt(display.innerHTML, 10);
-                console.log(n);
-                setTimeout(() => {
-                    display.innerHTML = n;
-                }, 10);
-            }
-            if(operator == "*"){
-                n *= parseInt(display.innerHTML, 10);
-                console.log(n);
-                setTimeout(() => {
-                    display.innerHTML = n;
-                }, 10);
-            }
-        }
-
-
-        else if(alvo == "+"){
-            operator = "+";
-            n += parseInt(display.innerHTML, 10);
-            setTimeout(() => {
-                display.innerHTML = "";
-            }, 10);
-            console.log(n);
-        }
         else if(alvo == "-"){
-            operator = "-";
-            n -= parseInt(display.innerHTML, 10);
-            setTimeout(() => {
+            if(first == true){
+                n = parseInt(display.innerHTML, 10);
                 display.innerHTML = "";
-            }, 10);
-            console.log(n);
+                display2.innerHTML = n;
+                first = false;
+                operator = "-"
+                console.log(n);
+            }
+            else{
+                if(operator == "+"){
+                    n += parseInt(display.innerHTML, 10);
+                    display.innerHTML = "";
+                    display2.innerHTML = n;
+                    operator = "-"
+                    console.log(n);
+                }
+                else if(operator == "-"){
+                    n -= parseInt(display.innerHTML, 10);
+                    display.innerHTML = "";
+                    display2.innerHTML = n;
+                    operator = "-"
+                    console.log(n);
+                }    
+                else if(operator == "*"){
+                    n *= parseInt(display.innerHTML, 10);
+                    display.innerHTML = "";
+                    display2.innerHTML = n;
+                    operator = "-"
+                    console.log(n);
+                }    
+                else if(operator == "/"){
+                    n /= parseInt(display.innerHTML, 10);
+                    display.innerHTML = "";
+                    display2.innerHTML = n;
+                    operator = "-"
+                    console.log(n);
+                }
+            }
         }
-        else if(alvo == "/"){
-            operator = "/";
-            n /= parseInt(display.innerHTML, 10);
-            setTimeout(() => {
+        else if(alvo == "+"){
+            if(first == true){
+                n = parseInt(display.innerHTML, 10);
                 display.innerHTML = "";
-            }, 10);
-            console.log(n);
+                display2.innerHTML = n;
+                first = false;
+                operator = "+"
+                console.log(n);
+            }
+            else{
+                if(operator == "+"){
+                    n += parseInt(display.innerHTML, 10);
+                    display.innerHTML = "";
+                    display2.innerHTML = n;
+                    operator = "+"
+                    console.log(n);
+                }
+                else if(operator == "-"){
+                    n -= parseInt(display.innerHTML, 10);
+                    display.innerHTML = "";
+                    display2.innerHTML = n;
+                    operator = "+"
+                    console.log(n);
+                }    
+                else if(operator == "*"){
+                    n *= parseInt(display.innerHTML, 10);
+                    display.innerHTML = "";
+                    display2.innerHTML = n;
+                    operator = "+"
+                    console.log(n);
+                }    
+                else if(operator == "/"){
+                    n /= parseInt(display.innerHTML, 10);
+                    display.innerHTML = "";
+                    display2.innerHTML = n;
+                    operator = "+"
+                    console.log(n);
+                }
+            }
         }
         else if(alvo == "*"){
-            operator = "*";
-            n *= parseInt(display.innerHTML, 10);
-            setTimeout(() => {
+            if(first == true){
+                n = parseInt(display.innerHTML, 10);
                 display.innerHTML = "";
-            }, 10);
-            console.log(n);
+                display2.innerHTML = n;
+                first = false;
+                operator = "*"
+                console.log(n);
+            }
+            else{
+                if(operator == "+"){
+                    n += parseInt(display.innerHTML, 10);
+                    display.innerHTML = "";
+                    display2.innerHTML = n;
+                    operator = "*"
+                    console.log(n);
+                }
+                else if(operator == "-"){
+                    n -= parseInt(display.innerHTML, 10);
+                    display.innerHTML = "";
+                    display2.innerHTML = n;
+                    operator = "*"
+                    console.log(n);
+                }    
+                else if(operator == "*"){
+                    n *= parseInt(display.innerHTML, 10);
+                    display.innerHTML = "";
+                    display2.innerHTML = n;
+                    operator = "*"
+                    console.log(n);
+                }    
+                else if(operator == "/"){
+                    n /= parseInt(display.innerHTML, 10);
+                    display.innerHTML = "";
+                    display2.innerHTML = n;
+                    operator = "*"
+                    console.log(n);
+                }
+            }
+        }
+        else if(alvo == "/"){
+            if(first == true){
+                n = parseInt(display.innerHTML, 10);
+                display.innerHTML = "";
+                display2.innerHTML = n;
+                first = false;
+                operator = "/"
+                console.log(n);
+            }
+            else{
+                if(operator == "+"){
+                    n += parseInt(display.innerHTML, 10);
+                    display.innerHTML = "";
+                    display2.innerHTML = n;
+                    operator = "/"
+                    console.log(n);
+                }
+                else if(operator == "-"){
+                    n -= parseInt(display.innerHTML, 10);
+                    display.innerHTML = "";
+                    display2.innerHTML = n;
+                    operator = "/"
+                    console.log(n);
+                }    
+                else if(operator == "*"){
+                    n *= parseInt(display.innerHTML, 10);
+                    display.innerHTML = "";
+                    display2.innerHTML = n;
+                    operator = "/"
+                    console.log(n);
+                }    
+                else if(operator == "/"){
+                    n /= parseInt(display.innerHTML, 10);
+                    display.innerHTML = "";
+                    display2.innerHTML = n;
+                    operator = "/"
+                    console.log(n);
+                }
+            }
         }
 
+
+        // numeros
         else{
             display.innerHTML += alvo;
-            n = display.innerHTML + alvo;
-            console.log(n);
-        }
+        } 
     })
 })
