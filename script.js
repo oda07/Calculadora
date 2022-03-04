@@ -15,6 +15,7 @@ buttons.map((button)=>{
             n = 0;
             operator = "none";
             console.log(n);
+            first = true;
             return;
         }
         
